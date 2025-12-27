@@ -20,7 +20,10 @@ Cat::Cat(Cat &other) : Animal(other)
 Cat& Cat::operator=(Cat &other)
 {
 	if (this != &other)
+	{
+		std::cout << "A " << other.getType() << " was assigned to another " << this->getType() << std::endl;
 		this->type = other.getType();
+	}
 	return (*this);
 }
 

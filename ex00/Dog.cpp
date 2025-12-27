@@ -20,7 +20,10 @@ Dog::Dog(Dog &other) : Animal()
 Dog& Dog::operator=(Dog &other)
 {
 	if (this != &other)
+	{
+		std::cout << "A " << other.getType() << " was assigned to another " << this->getType() << std::endl;
 		this->type = other.getType();
+	}
 	return (*this);
 }
 
