@@ -4,7 +4,6 @@
 
 int	main()
 {
-	/*
 	{
 		Animal	*kennel[10];
 
@@ -22,7 +21,7 @@ int	main()
 			delete kennel[i];
 		}
 	}
-	*/
+	/*
 	{
 		Cat	cat;
 
@@ -39,6 +38,7 @@ int	main()
 		std::cout << cat.getIdea(1) << std::endl;
 		std::cout << other.getIdea(1) << std::endl;
 	}
+	*/
 	/*
 	{
 		Dog	dog;
