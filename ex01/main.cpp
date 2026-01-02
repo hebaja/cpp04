@@ -26,17 +26,17 @@ int	main()
 		Cat	cat;
 
 		cat.includeIdea(0, "FSSSS");
-		std::cout << cat.getIdea(0) << std::endl;
+		std::cout << "	Original cat -> " << cat.getIdea(0) << std::endl;
 
-		Cat	other = cat; 
+		Cat	other = cat;
 		
-		std::cout << other.getIdea(0) << std::endl;
+		std::cout << "	Copied cat -> " << other.getIdea(0) << std::endl;
 		cat.includeIdea(1, "Scratch");
-		std::cout << cat.getIdea(1) << std::endl;
-		std::cout << other.getIdea(1) << std::endl;
+		std::cout << "	Original cat -> " << cat.getIdea(1) << std::endl;
+		std::cout << "	Copied cat -> " << other.getIdea(1) << std::endl;
 		other.includeIdea(1, "Eat more");
-		std::cout << cat.getIdea(1) << std::endl;
-		std::cout << other.getIdea(1) << std::endl;
+		std::cout << "	Original cat -> " << cat.getIdea(1) << std::endl;
+		std::cout << "	Copied cat -> " << other.getIdea(1) << std::endl;
 	}
 	*/
 	/*
@@ -44,17 +44,17 @@ int	main()
 		Dog	dog;
 
 		dog.includeIdea(0, "Woof");
-		std::cout << dog.getIdea(0) << std::endl;
+		std::cout << "	Original dog -> " << dog.getIdea(0) << std::endl;
 
 		Dog	other(dog);
 		
-		std::cout << other.getIdea(0) << std::endl;
+		std::cout << "	Copied dog -> " << other.getIdea(0) << std::endl;
 		dog.includeIdea(1, "Scratch");
-		std::cout << dog.getIdea(1) << std::endl;
-		std::cout << other.getIdea(1) << std::endl;
+		std::cout << "	Original dog -> " << dog.getIdea(1) << std::endl;
+		std::cout << "	Copied dog -> " << other.getIdea(1) << std::endl;
 		other.includeIdea(1, "Eat more");
-		std::cout << dog.getIdea(1) << std::endl;
-		std::cout << other.getIdea(1) << std::endl;
+		std::cout << "	Original dog -> " << dog.getIdea(1) << std::endl;
+		std::cout << "	Copied dog -> " << other.getIdea(1) << std::endl;
 	}
 	*/
 	/*
