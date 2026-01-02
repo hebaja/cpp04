@@ -19,6 +19,7 @@ int	main()
 		delete j;
 		delete i;
 	}
+	/*
 	std::cout << "***************************" << std::endl;
 	{
 		const Animal animal;
@@ -45,6 +46,27 @@ int	main()
 		delete dog;
 		delete cat;
 	}
+	std::cout << "***************************" << std::endl;
+	{
+		Dog dog;
+		Dog otherDog;
+		otherDog = dog;
+		otherDog.makeSound();
 
+		Cat cat;
+		Cat otherCat(cat);
+		otherCat.makeSound();
+	}
+	std::cout << "***************************" << std::endl;
+	{
+		Dog* dog = new Dog();
+		Dog* otherDog = new Dog();
+
+		*otherDog = *dog;
+
+		delete dog;
+		delete otherDog;
+	}
+	*/
 	return (0);
 }
