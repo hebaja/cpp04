@@ -1,7 +1,7 @@
 CXX = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = Animal
-SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp
+SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
 SRC_DIR = .
 SRCS=$(addprefix $(SRC_DIR)/, $(SRC))
 OBJS = $(SRCS:.cpp=.o)
