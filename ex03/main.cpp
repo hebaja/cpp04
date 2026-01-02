@@ -70,7 +70,6 @@ int	main()
 		Character::cleanStash();
 	}
 	*/
-
 	/*
 	{
 		IMateriaSource* src = new MateriaSource();

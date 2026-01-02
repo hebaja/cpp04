@@ -25,7 +25,10 @@ Character::Character(Character &other)
 			delete this->slots[i];
 	}
 	for (size_t i = 0; i < 4; i++) {
-		this->slots[i] = other.slots[i];
+		if (other.slots[i])
+			this->slots[i] = other.slots[i]->clone();
+		else
+			this->slots[i] = 0;
 	}
 }
 
@@ -38,11 +41,15 @@ Character& Character::operator=(Character &other)
 				delete this->slots[i];
 		}
 		for (size_t i = 0; i < 4; i++) {
-			this->slots[i] = other.slots[i];
+			if (other.slots[i])
+				this->slots[i] = other.slots[i]->clone();
+			else
+				this->slots[i] = 0;
 		}
 	}
 	return (*this);
 }
+
 std::string const &Character::getName() const
 {
 	return (this->name);
@@ -72,17 +79,6 @@ void Character::unequip(int idx)
 	Character::stash[currStashIdx] = this->slots[idx];
 	this->slots[idx] = 0;
 	Character::stashIdx++;
-
-	/*
-	for (size_t i = 0; i < Character::stashSize; i++) {
-		if (Character::stash[i] == 0)
-		{
-			Character::stash[i] = this->slots[idx];
-			break ;
-		}
-	}
-	this->slots[idx] = 0;
-	*/
 }
 
 void Character::use(int idx, ICharacter& target)

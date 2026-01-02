@@ -26,7 +26,6 @@ void MateriaSource::learnMateria(AMateria* m)
 			return ;
 		}
 	}
-	//// here
 	delete m;
 }
 
